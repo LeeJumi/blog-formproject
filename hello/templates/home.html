@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+
+
+<body>
+<br>
+<p>123</p>
+
+<a href="{% url 'create'%}">글쓰기</a>
+
+{% for b in blogs %} <!--b는 변수이기 때문에 다른 말로 변경 가능-->
+{{b.title}} <br>
+{{b.body}} <br>
+{{b.pub_date}}<br><br>
+{% endfor %}
+</body>
+{% endblock %}
